@@ -1,0 +1,21 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "http",
+      "image": "your-docker-image-url",
+      "essential": true,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ]
+    }
+  ],
+  "family": "multi-container-docker",
+  "containerPort": 8080,
+  "hostPort": 8080,
+  "executionRole": "ecsTaskExecutionRole"
+}
